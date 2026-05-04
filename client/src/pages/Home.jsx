@@ -60,7 +60,7 @@ const CATEGORIES = [
   { name: "Burger", img: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=300&auto=format&fit=crop" },
   { name: "Pizza", img: "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=300&auto=format&fit=crop" },
   { name: "Biryani", img: "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?q=80&w=300&auto=format&fit=crop" },
-  { name: "Rolls", img: "https://images.unsplash.com/photo-1626777553732-48993abc82b9?q=80&w=300&auto=format&fit=crop" },
+  { name: "Rolls", img: "https://images.unsplash.com/photo-1541518763669-27fef04b14ea?q=80&w=300&auto=format&fit=crop" },
   { name: "Cake", img: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=300&auto=format&fit=crop" },
   { name: "Dosa", img: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=300&auto=format&fit=crop" },
   { name: "Noodles", img: "https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=300&auto=format&fit=crop" },
