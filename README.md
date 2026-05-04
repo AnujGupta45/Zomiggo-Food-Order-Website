@@ -1,78 +1,58 @@
-# FoodoFest - Modern Food Delivery Application
+# Zomiggo 🍔 - Full-Stack Food Delivery App
 
-A full-stack food delivery application built with MERN stack (MongoDB, Express, React, Node.js) and Tailwind CSS.
+Zomiggo is a modern, responsive, and high-performance food delivery application inspired by industry leaders like Swiggy and Zomato. Built with the MERN stack and styled for a premium experience.
 
-## Features
+## ✨ Key Features
 
-- **User Side**:
-  - Home page with search and category filters.
-  - Restaurant details with menu categories.
-  - Cart management (add, remove, update quantity).
-  - Login & Signup with JWT (Mocked for demo).
-  - Checkout with address input and mock payment.
-- **Admin Side**:
-  - Dashboard to manage restaurants and orders.
-- **UI/UX**:
-  - Modern, responsive design inspired by Swiggy/Zomato.
-  - Smooth animations and skeleton loaders.
-  - Toast notifications for user actions.
+- **🚀 Performance**: Built with React 19 + Vite for blazing fast load times.
+- **🎨 Premium UI**: Modern glassmorphism design using Tailwind CSS v4 and Framer Motion.
+- **🛒 Smart Cart**: Real-time cart management with coupon support (`FIRST50`).
+- **💳 Realistic Checkout**: Multi-step checkout flow with simulated payment gateway (UPI, Card, Netbanking).
+- **📱 Responsive**: Fully optimized for Mobile, Tablet, and Desktop.
+- **🔐 Secure Auth**: JWT-based authentication with protected routes.
+- **🏠 User Dashboard**: Order history, profile management, and saved addresses.
+- **🏢 Admin Panel**: Manage restaurants, menu items, and view orders.
 
-## Tech Stack
+## 🛠️ Tech Stack
 
-- **Frontend**: React.js, Tailwind CSS, Lucide React, React Router, Axios.
-- **Backend**: Node.js, Express, MongoDB (Mongoose), JWT.
+- **Frontend**: React.js, Tailwind CSS v4, Framer Motion, Lucide React, Axios.
+- **Backend**: Node.js, Express.js.
+- **Database**: MongoDB (Mongoose).
+- **State Management**: React Context API.
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js installed.
-- MongoDB installed and running (optional for demo, but required for data persistence).
+- Node.js installed
+- MongoDB installed and running
 
 ### Installation
 
-1. **Clone the project** (if not already in the folder).
-2. **Setup Backend**:
+1. **Clone the repository**
+   ```bash
+   git clone <your-repo-url>
+   ```
+
+2. **Backend Setup**
    ```bash
    cd server
    npm install
+   # Create a .env file and add your MONGO_URI and JWT_SECRET
+   npm start
    ```
-3. **Setup Frontend**:
+
+3. **Frontend Setup**
    ```bash
    cd client
    npm install
-   ```
-
-### Running the App
-
-1. **Start MongoDB** (Ensure it's running at `mongodb://localhost:27017/food-delivery`).
-2. **Seed Data** (Optional, to populate restaurants):
-   ```bash
-   cd server
-   node seed.js
-   ```
-3. **Start Backend**:
-   ```bash
-   cd server
-   npm run dev (or npx nodemon server.js)
-   ```
-4. **Start Frontend**:
-   ```bash
-   cd client
    npm run dev
    ```
 
-Open [http://localhost:5173](http://localhost:5173) to view the app.
+## 📸 Preview
 
-## Environment Variables
+Visit `http://localhost:5176` after starting both servers.
 
-**Server (.env)**:
-```env
-PORT=5000
-MONGO_URI=mongodb://localhost:27017/food-delivery
-JWT_SECRET=your_super_secret_key_123
-NODE_ENV=development
-```
+## 📄 License
 
-## Note on MongoDB
-If you don't have MongoDB installed, the app will show loading states or errors when fetching restaurants. You can use **MongoDB Atlas** by replacing the `MONGO_URI` in `server/.env`.
+This project is open-source and available under the [MIT License](LICENSE).
