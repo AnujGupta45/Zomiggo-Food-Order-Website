@@ -52,7 +52,7 @@ const MOCK_RESTAURANTS = [
     cuisines: ["Fried Chicken", "Fast Food"],
     rating: 4.0,
     deliveryTime: "30-35 mins",
-    image: "https://images.unsplash.com/photo-1623341214825-9f4f963727da?q=80&w=800&auto=format&fit=crop"
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/KFC_logo.svg/1024px-KFC_logo.svg.png"
   }
 ];
 
