@@ -7,20 +7,85 @@ import Skeleton from '../components/Skeleton';
 import toast from 'react-hot-toast';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const MOCK_RESTAURANT = {
-  _id: "1",
-  name: "La Pino'z Pizza",
-  description: "Pizza, Italian, Pasta, Beverages",
-  image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=800&auto=format&fit=crop",
-  rating: 4.5,
-  deliveryTime: "35-40 mins",
-  cuisines: ["Pizza", "Italian", "Pasta"],
-  menu: [
-    { _id: "m1", name: "Farmhouse Pizza", price: 399, description: "Delightful combination of onion, capsicum, tomato & grilled mushroom", image: "https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?q=80&w=600&auto=format&fit=crop" },
-    { _id: "m2", name: "Paneer Tikka Pizza", price: 449, description: "Spiced paneer, onion and capsicum with tandoori sauce", image: "https://images.unsplash.com/photo-1594007654729-407eedc4be65?q=80&w=600&auto=format&fit=crop" },
-    { _id: "m3", name: "Garlic Breadsticks", price: 129, description: "Freshly baked breadsticks with garlic and herbs", image: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?q=80&w=600&auto=format&fit=crop" },
-    { _id: "m4", name: "Choco Lava Cake", price: 99, description: "Hot chocolate cake with a molten center", image: "https://images.unsplash.com/photo-1511911063855-2bf39afa5b2e?q=80&w=600&auto=format&fit=crop" }
-  ]
+const MOCK_RESTAURANTS_DATA = {
+  "1": {
+    name: "Burger King",
+    description: "Flame-grilled burgers, crispy fries, and refreshing beverages.",
+    image: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=800&auto=format&fit=crop",
+    rating: 4.2,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Burgers", "American"],
+    menu: [
+      { _id: "bk1", name: "Whopper Burger", price: 199, description: "Our signature flame-grilled beef patty with juicy tomatoes and fresh lettuce.", image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600&auto=format&fit=crop" },
+      { _id: "bk2", name: "Crispy Chicken Royale", price: 159, description: "Breaded chicken breast topped with lettuce and creamy mayonnaise.", image: "https://images.unsplash.com/photo-1606755962773-d324e0a13086?q=80&w=600&auto=format&fit=crop" },
+      { _id: "bk3", name: "King Fries", price: 99, description: "Perfectly salted golden brown potato fries.", image: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?q=80&w=600&auto=format&fit=crop" }
+    ]
+  },
+  "2": {
+    name: "La Pino'z Pizza",
+    description: "Authentic Italian pizzas with premium toppings and gooey cheese.",
+    image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=800&auto=format&fit=crop",
+    rating: 4.5,
+    deliveryTime: "35-40 mins",
+    cuisines: ["Pizza", "Italian", "Pasta"],
+    menu: [
+      { _id: "lp1", name: "Farmhouse Special", price: 399, description: "Loaded with onion, capsicum, tomato and grilled mushroom.", image: "https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?q=80&w=600&auto=format&fit=crop" },
+      { _id: "lp2", name: "7 Cheese Pizza", price: 499, description: "A heavenly blend of 7 different types of premium cheese.", image: "https://images.unsplash.com/photo-1594007654729-407eedc4be65?q=80&w=600&auto=format&fit=crop" },
+      { _id: "lp3", name: "White Sauce Pasta", price: 249, description: "Creamy pasta with herbs, corn and bell peppers.", image: "https://images.unsplash.com/photo-1645112481338-30145014ec3b?q=80&w=600&auto=format&fit=crop" }
+    ]
+  },
+  "3": {
+    name: "Biryani Blues",
+    description: "Rich and aromatic Hyderabadi biryanis cooked to perfection.",
+    image: "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?q=80&w=800&auto=format&fit=crop",
+    rating: 4.1,
+    deliveryTime: "40-45 mins",
+    cuisines: ["Biryani", "Indian", "Mughlai"],
+    menu: [
+      { _id: "bb1", name: "Chicken Dum Biryani", price: 349, description: "Authentic Hyderabadi chicken biryani with long grain basmati rice.", image: "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?q=80&w=600&auto=format&fit=crop" },
+      { _id: "bb2", name: "Paneer Biryani", price: 299, description: "Fragrant biryani with marinated paneer cubes and spices.", image: "https://images.unsplash.com/photo-1633383718081-22ac93e3dbf1?q=80&w=600&auto=format&fit=crop" },
+      { _id: "bb3", name: "Double Ka Meetha", price: 129, description: "Traditional bread pudding dessert with saffron and nuts.", image: "https://images.unsplash.com/photo-1589119908995-c6837fa14848?q=80&w=600&auto=format&fit=crop" }
+    ]
+  },
+  "4": {
+    name: "The Coffee Bean",
+    description: "Gourmet coffee blends and artisanal desserts.",
+    image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=800&auto=format&fit=crop",
+    rating: 4.7,
+    deliveryTime: "15-20 mins",
+    cuisines: ["Coffee", "Cafe", "Desserts"],
+    menu: [
+      { _id: "cb1", name: "Caramel Macchiato", price: 229, description: "Freshly steamed milk with vanilla-flavored syrup marked with espresso.", image: "https://images.unsplash.com/photo-1485808191679-5f86510681a2?q=80&w=600&auto=format&fit=crop" },
+      { _id: "cb2", name: "Blueberry Cheesecake", price: 189, description: "Creamy cheesecake topped with delicious blueberry compote.", image: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?q=80&w=600&auto=format&fit=crop" },
+      { _id: "cb3", name: "Club Sandwich", price: 159, description: "Three-layered sandwich with veggies, cheese and herbs.", image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?q=80&w=600&auto=format&fit=crop" }
+    ]
+  },
+  "5": {
+    name: "Subway Fresh",
+    description: "Freshly made sandwiches, wraps, and salads.",
+    image: "https://images.unsplash.com/photo-1534353436294-0dbd4bdac845?q=80&w=800&auto=format&fit=crop",
+    rating: 4.3,
+    deliveryTime: "20-25 mins",
+    cuisines: ["Healthy", "Salads", "Sandwich"],
+    menu: [
+      { _id: "sw1", name: "Paneer Tikka Sub", price: 189, description: "Spiced paneer tikka with your choice of veggies and sauces.", image: "https://images.unsplash.com/photo-1534353436294-0dbd4bdac845?q=80&w=600&auto=format&fit=crop" },
+      { _id: "sw2", name: "Roasted Chicken Sub", price: 219, description: "Tender roasted chicken with fresh toppings in freshly baked bread.", image: "https://images.unsplash.com/photo-1509722747041-619f382b83ca?q=80&w=600&auto=format&fit=crop" },
+      { _id: "sw3", name: "Garden Salad", price: 149, description: "A healthy mix of seasonal vegetables with light vinaigrette.", image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=600&auto=format&fit=crop" }
+    ]
+  },
+  "6": {
+    name: "KFC Fried Chicken",
+    description: "World famous crispy fried chicken and bucket meals.",
+    image: "https://images.unsplash.com/photo-1513639732840-c6d710bd60ad?q=80&w=800&auto=format&fit=crop",
+    rating: 4.0,
+    deliveryTime: "30-35 mins",
+    cuisines: ["Fried Chicken", "Fast Food"],
+    menu: [
+      { _id: "kfc1", name: "Zinger Burger", price: 179, description: "Signature crispy chicken fillet burger with spicy mayo.", image: "https://images.unsplash.com/photo-1513639732840-c6d710bd60ad?q=80&w=600&auto=format&fit=crop" },
+      { _id: "kfc2", name: "Chicken Bucket (4pc)", price: 449, description: "Our world-famous Hot & Crispy chicken pieces.", image: "https://images.unsplash.com/photo-1562967914-608f82629710?q=80&w=600&auto=format&fit=crop" },
+      { _id: "kfc3", name: "Popcorn Chicken", price: 129, description: "Bite-sized pieces of breaded chicken fried to perfection.", image: "https://images.unsplash.com/photo-1562967914-c36f13904943?q=80&w=600&auto=format&fit=crop" }
+    ]
+  }
 };
 
 const RestaurantDetails = () => {
@@ -36,12 +101,12 @@ const RestaurantDetails = () => {
         if (data) {
           setRestaurant(data);
         } else {
-          setRestaurant(MOCK_RESTAURANT);
+          setRestaurant(MOCK_RESTAURANTS_DATA[id] || MOCK_RESTAURANTS_DATA["1"]);
         }
         setLoading(false);
       } catch (error) {
-        console.warn('API failed, using mock data for restaurant');
-        setRestaurant(MOCK_RESTAURANT);
+        console.warn('API failed, using realistic mock data for restaurant');
+        setRestaurant(MOCK_RESTAURANTS_DATA[id] || MOCK_RESTAURANTS_DATA["1"]);
         setLoading(false);
       }
     };

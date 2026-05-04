@@ -28,7 +28,7 @@ const MOCK_RESTAURANTS = [
     cuisines: ["Biryani", "Hyderabadi", "Indian"],
     rating: 4.1,
     deliveryTime: "40-45 mins",
-    image: "https://images.unsplash.com/photo-1563379091339-03b21bc4a4f8?q=80&w=800&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?q=80&w=800&auto=format&fit=crop"
   },
   {
     _id: "4",
@@ -57,13 +57,13 @@ const MOCK_RESTAURANTS = [
 ];
 
 const CATEGORIES = [
-  { name: "Burger", img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029845/PC_Creative%20refresh/3D_OTG/is_it_really_hot/Burger.png" },
-  { name: "Pizza", img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029856/PC_Creative%20refresh/3D_OTG/is_it_really_hot/Pizza.png" },
-  { name: "Biryani", img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029848/PC_Creative%20refresh/3D_OTG/is_it_really_hot/Biryani.png" },
-  { name: "Rolls", img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029858/PC_Creative%20refresh/3D_OTG/is_it_really_hot/Rolls.png" },
-  { name: "Cake", img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029845/PC_Creative%20refresh/3D_OTG/is_it_really_hot/Cake.png" },
-  { name: "Dosa", img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029850/PC_Creative%20refresh/3D_OTG/is_it_really_hot/Dosa.png" },
-  { name: "Noodles", img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029855/PC_Creative%20refresh/3D_OTG/is_it_really_hot/Noodles.png" },
+  { name: "Burger", img: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=300&auto=format&fit=crop" },
+  { name: "Pizza", img: "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=300&auto=format&fit=crop" },
+  { name: "Biryani", img: "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?q=80&w=300&auto=format&fit=crop" },
+  { name: "Rolls", img: "https://images.unsplash.com/photo-1626777553732-48993abc82b9?q=80&w=300&auto=format&fit=crop" },
+  { name: "Cake", img: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=300&auto=format&fit=crop" },
+  { name: "Dosa", img: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=300&auto=format&fit=crop" },
+  { name: "Noodles", img: "https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=300&auto=format&fit=crop" },
 ];
 
 const Home = () => {
