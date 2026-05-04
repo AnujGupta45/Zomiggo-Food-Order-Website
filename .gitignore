@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Production
+client/dist/
+server/dist/
+
+# Environment Variables
+.env
+server/.env
+client/.env
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Browser Testing
+client/home_page.png
+client/restaurant_page.png
+browser/
+.tempmediaStorage/
+verify_fix_*
