@@ -91,7 +91,7 @@ const MOCK_RESTAURANTS_DATA = {
   "6": {
     name: "KFC Fried Chicken",
     description: "World famous crispy fried chicken and bucket meals.",
-    image: "https://images.unsplash.com/photo-1513639732840-c6d710bd60ad?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1623341214825-9f4f963727da?q=80&w=800&auto=format&fit=crop",
     rating: 4.0,
     deliveryTime: "30-35 mins",
     cuisines: ["Fried Chicken", "Fast Food"],
